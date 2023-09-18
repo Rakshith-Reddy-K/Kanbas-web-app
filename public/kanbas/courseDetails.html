@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td valign="baseline">
+                    <ul>
+                        <li> <a href="account.html">Account</a> </li>
+                        <li> <a href="#">Dashboard</a> </li>
+                        <li> <a href="courses.html">Courses</a> </li>
+                        <li> <a href="#">Calender</a> </li>
+                        <li> <a href="#">Inbox</a> </li>
+                        <li> <a href="#">History</a> </li>
+                        <li> <a href="#">Studio</a> </li>
+                        <li> <a href="#">Commons</a> </li>
+                        <li> <a href="#">Help</a> </li>
+                    </ul>
+                </td>
+                <td valign="baseline">
+                    <ul>
+                        <li> <a href="home.html">Home</a> </li>
+                        <li> <a href="#">Modules</a> </li>
+                        <li> <a href="#">Piazza</a> </li>
+                        <li> <a href="#">Zoom Meetings</a> </li>
+                        <li> <a href="./assignments/index.html">Assignments</a> </li>
+                        <li> <a href="#">Quizzes</a> </li>
+                        <li> <a href="grades.html">Grades</a> </li>
+                        <li> <a href="#">People</a> </li>
+                        <li> <a href="#">Panopto Video</a> </li>
+                        <li> <a href="#">Discussions</a> </li>
+                        <li> <a href="#">Announcements</a> </li>
+                        <li> <a href="#">Pages</a> </li>
+                        <li> <a href="#">Files</a> </li>
+                        <li> <a href="#">Rubrics</a> </li>
+                        <li> <a href="#">Outcomes</a> </li>
+                        <li> <a href="#">Collaborations</a> </li>
+                        <li> <a href="#">Syllabus</a> </li>
+                        <li> <a href="settings.html">Settings</a> </li>
+                    </ul>
+                </td>
+                <td valign="baseline">
+                    <a href="courseDetails.html">Course Details</a>
+                    <a href="#">Sections</a>
+                    <a href="navigation.html">Navigation</a>
+                    <a href="#">Apps</a>
+                    <a href="#">Feature Options</a>
+                    <a href="#">Integrations</a>
+                    <form>
+                        <h2>Course Details</h2>
+                        <label for="image">
+                            <h5>Image: </h5>
+                        </label>
+                        <button id="image">Choose Image</button>
+                        <label>
+                            <h5>Name: </h5> CS5610 11550 Web development Sec-1
+                        </label>
+                        <label>
+                            <h5>Course Code: </h5> CS5610.11550.202410
+                        </label>
+                        <label>
+                            <h5>BluePrint Course: </h5> No
+                        </label>
+                        <h5>Course Template:</h5>
+                        <input type="checkbox" name="check-group" id="chkbox-courseTemplate" />
+                        <label for="chkbox-courseTemplate">Enable course as Course Template</label>
+                        <label for="timezone">
+                            <h5>Time Zone: </h5>
+                        </label>
+                        <select id="timezone">
+                            <option>Eastern Time (US & Canada) (-5:00/ -4:00)</option>
+                        </select>
+                        <label>
+                            <h5>SIS ID: </h5> CS5610.11550.202410
+                        </label>
+                        <label>
+                            <h5>Subaccount: </h5> <a href="#">CSUndergrad</a>
+                        </label>
+                        <label>
+                            <h5>Term: </h5> Fall 2023
+                        </label>
+                        <label for="term">
+                            <h5>Participation</h5>
+                        </label>
+                        <select id="term">
+                            <option>Term</option>
+                        </select><br>
+                        <label for="start">Start</label><br>
+                        <input type="date" id="start" /><br>
+                        <label for="end">End</label><br>
+                        <input type="date" id="end" /><br>
+                        <input type="checkbox" name="restrict-group" id="chkbox-restrictStart" />
+                        <label for="chkbox-restrictStart">Restrict Students from viewing course before term start
+                            date</label><br>
+                        <input type="checkbox" name="restrict-group" id="chkbox-restrictEnd" />
+                        <label for="chkbox-restrictEnd">Restrict students from viewing after term end date</label><br>
+                        <label for="dueTime">
+                            <h5>Default Due time: </h5>
+                        </label>
+                        <select id="dueTime">
+                            <option>Account Default</option>
+                        </select>
+                        <p>This infulences the user interface for setting due dates.</p>
+                        <label for="language">
+                            <h5>Language: </h5>
+                        </label>
+                        <select id="language">
+                            <option>Not set</option>
+                        </select>
+                        <p>This will override any user/system language preferences</p>
+                        <label>
+                            <h5>File Storage: </h5> 10000 megabytes
+                        </label>
+
+                        <h5>Large Course:</h5>
+                        <input type="checkbox" id="chkbox-speedGrader" />
+                        <label for="chkbox-speedGrader">Launch SpeedGrader Filtered by Student Group</label>
+                        <h5>Grading Screen:</h5>
+                        <input type="checkbox" id="chkbox-scheme" />
+                        <label for="chkbox-scheme">Enable Course grading scheme</label>
+
+                        <label for="license">
+                            <h5>License: </h5>
+                        </label>
+                        <select id="license">
+                            <option>Private (Copyrighted)</option>
+                        </select>
+
+                        <h5>File Copyright:</h5>
+                        <input type="checkbox" id="chkbox-copyright" />
+                        <label for="chkbox-copyright">Copyright and license information must be provided for files
+                            before they are published</label>
+
+                        <label for="visibility">
+                            <h5>Default Due time: </h5>
+                        </label>
+                        <p>If you need to make your course public please contact your administrator/support</p>
+                        <select id="visibility">
+                            <option>Course</option>
+                        </select>
+
+                        <label for="format">
+                            <h5>Format: </h5>
+                        </label>
+                        <select id="format">
+                            <option>On-Campus</option>
+                        </select>
+
+                        <h5>Mastery Paths</h5>
+                        <input type="checkbox" id="chkbox-masteryPaths" />
+                        <label for="chkbox-copyright">Enable individual learning paths for studnets based on assessment</label>
+
+                        <h5>Biography</h5>
+                    <textarea cols="30" rows="3"
+                            title="tooltip"></textarea><br>
+
+                            <input type="submit" value="Update Course Details"/>
+                    </form>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>

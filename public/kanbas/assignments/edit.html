@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td valign="baseline">
+                    <ul>
+                        <li> <a href="#">Account</a> </li>
+                        <li> <a href="#">Dashboard</a> </li>
+                        <li> <a href="courses.html">Courses</a> </li>
+                        <li> <a href="#">Calender</a> </li>
+                        <li> <a href="#">Inbox</a> </li>
+                        <li> <a href="#">History</a> </li>
+                        <li> <a href="#">Studio</a> </li>
+                        <li> <a href="#">Commons</a> </li>
+                        <li> <a href="#">Help</a> </li>
+                    </ul>
+                </td>
+                <td valign="baseline">
+                    <ul>
+                        <li> <a href="home.html">Home</a> </li>
+                        <li> <a href="#">Modules</a> </li>
+                        <li> <a href="#">Piazza</a> </li>
+                        <li> <a href="#">Zoom Meetings</a> </li>
+                        <li> <a href="index.html">Assignments</a> </li>
+                        <li> <a href="#">Quizzes</a> </li>
+                        <li> <a href="grades.html">Grades</a> </li>
+                        <li> <a href="#">People</a> </li>
+                        <li> <a href="#">Panopto Video</a> </li>
+                        <li> <a href="#">Discussions</a> </li>
+                        <li> <a href="#">Announcements</a> </li>
+                        <li> <a href="#">Pages</a> </li>
+                        <li> <a href="#">Files</a> </li>
+                        <li> <a href="#">Rubrics</a> </li>
+                        <li> <a href="#">Outcomes</a> </li>
+                        <li> <a href="#">Collaborations</a> </li>
+                        <li> <a href="#">Syllabus</a> </li>
+                        <li> <a href="../settings.html">Settings</a> </li>
+                    </ul>
+                </td>
+                <td valign="baseline">
+                    <form action="index.html">
+                        <select id="grader">
+                            <option>SpeedGrader</option>
+                        </select>
+                        <hr />
+                        <h3>Assignment Name</h3>
+                        <input type="text" placeholder="Search Assignments" value="A1 - ENV + HTML" /><br><br>
+                        <textarea cols="30" rows="3" placeholder="Description"
+                            title="tooltip">This is the assignment description</textarea><br>
+                        <label>Points</label><br>
+                        <input type="text" value="10" /><br><br>
+                        <label>Assignment Group</label><br>
+                        <select id="assignmentGroup">
+                            <option>ASSIGNMENTS</option>
+                        </select><br><br>
+                        <label for="gradeMeasures">Display Grade as</label><br>
+                        <select id="gradeMeasures">
+                            <option>Percentage</option>
+                        </select><br><br>
+                        <label for="submissionType">Submission Type</label><br>
+                        <select id="submissionType">
+                            <option>Online</option>
+                        </select><br><br>
+                        <label>Online Entry Option</label><br>
+                        <input type="checkbox" name="check-entryOptions" id="chkbox-textEntry" />
+                        <label for="chkbox-textEntry">Text Entry</label><br>
+                        <input type="checkbox" name="check-entryOptions" id="chkbox-website" />
+                        <label for="chkbox-website">Website URL</label> <br>
+                        <input type="checkbox" name="check-entryOptions" id="chkbox-media" />
+                        <label for="chkbox-media">Media Recordings</label> <br>
+                        <input type="checkbox" name="check-entryOptions" id="chkbox-student" />
+                        <label for="chkbox-student">Student Annotation</label><br>
+                        <input type="checkbox" name="check-entryOptions" id="chkbox-file" />
+                        <label for="chkbox-file">File Uploads</label><br><br>
+                        <label for="submissionAttempts">Submission Attempts</label><br>
+                        <select id="submissionAttempts">
+                            <option>Unlimited</option>
+                        </select><br><br>
+                        <label for="plagarismReview">Plagarism Review</label><br>
+                        <select id="plagarismReview">
+                            <option>None</option>
+                        </select><br><br>
+                        <label>Group Assignment</label><br>
+                        <input type="checkbox" name="check-group" id="chkbox-groupAssignment" />
+                        <label for="chkbox-groupAssignment">This is a group assignment</label> <br><br>
+                        <label>Peer Reviews</label><br>
+                        <input type="checkbox" name="check-group" id="chkbox-peer" />
+                        <label for="chkbox-peer">Require Peer Reviews</label> <br><br>
+                        <label>Assign</label><br>
+                        <label>Assign to</label><br>
+                        <input type="text" value="Everyone" /><br><br>
+                        <label for="due">Due</label><br>
+                        <input type="date" id="due" /><br>
+                        <label for="availableFrom">Available From</label><br>
+                        <input type="date" id="availableFrom" /><br>
+                        <label for="until">Until</label><br>
+                        <input type="date" id="until" /><br><br>
+                        <input type="submit" value="Cancel" />
+                        <input type="submit" value="Save" />
+                    </form>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
