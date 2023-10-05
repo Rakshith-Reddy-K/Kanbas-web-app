@@ -4,88 +4,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
 </head>
-
 <body>
-    <table>
-        <tbody>
-            <tr>
-                <td valign="baseline">
-                    <ul>
-                        <li> <a href="../account.html">Account</a> </li>
-                        <li> <a href="#">Dashboard</a> </li>
-                        <li> <a href="../courses.html">Courses</a> </li>
-                        <li> <a href="#">Calender</a> </li>
-                        <li> <a href="#">Inbox</a> </li>
-                        <li> <a href="#">History</a> </li>
-                        <li> <a href="#">Studio</a> </li>
-                        <li> <a href="#">Commons</a> </li>
-                        <li> <a href="#">Help</a> </li>
-                    </ul>
-                </td>
-                <td valign="baseline">
-                    <ul>
-                        <li> <a href="#">Notifications</a> </li>
-                        <li> <a href="index.html">Profile</a> </li>
-                        <li> <a href="#">Files</a> </li>
-                        <li> <a href="#">Settings</a> </li>
-                        <li> <a href="#">eProtfolios</a> </li>
-                        <li> <a href="#">Shared Content</a> </li>
-                        <li> <a href="#">The Hub</a> </li>
-                        <li> <a href="#">Qwickly Course Tools</a> </li>
-                        <li> <a href="#">Global Announcements</a> </li>
-                    </ul>
-                </td>
-                <td valign="baseline">
-                    <form action="index.html">
-                    <h2>Rakshith Reddy</h2>
-                    <label for="text-fields-name">Name:*</label>
-                    <input id="text-fields-name" value="Rakshith Reddy"/>
-                    <label for="dropdown-pronouns">Pronouns</label>
-                    <select id="dropdown-pronouns">
-                        <option>None</option>
-                    </select><br>
-                    <label for="text-fields-title">Title: </label>
-                    <input id="text-fields-title"/><br>
-                    <h3>Contact</h3>
-                    <p>+1 (999) 999-9999</p><br>
-                    <h3>Biography</h3>
-                    <p>Student, Software developer and AI enthusiast</p>
-                    <textarea cols="30" rows="3"
-                            title="tooltip">Student, Software developer and AI enthusiast</textarea><br>
-                    <h3>Links</h3>
-                    <ul>
-                        <li>
-                            <a href="#">Linkedin -> Links to an external site</a>
-                        </li>
-                        <button type="button">Add another link</button>
-                    </ul>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>Title</th>
-                                <th></th>
-                                <th>URL</th>
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <td><input value="Linkedin"/></td>
-                                <td><p>--></p></td>
-                                <td><input value="https://rakLinkedin.com"/></td>
-                                <td><a href="#">Remove</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button type="button">Cancel</button>
-                    <input type="submit" value="Save Profile"/><br>
-                    <button type="button">Edit Profile</button>
-                    <input type="submit" value="Cancel Editing"/><br>
-                </form>
-                </td>
-            </tr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col bg-black wd-nav-sidebar d-none d-sm-block">
+                <ul class="wd-nav-sidebar-list  list-group">
+                    <li class="list-group-item neu-icon">
+                      <a href="#" >
+                         <img src="https://i.pinimg.com/originals/08/bd/47/08bd47b365a7ad4ed868352014ecbd48.png" alt="NEU Logo" class="img-fluid" >
+                      </a>
+                    </li>
+                    <li class="list-group-item account-icon">
+                        <a href="../account.html" >
+                            <i class="far fa-user-circle fa-2x" style="color: white"></i><br>Account
+                        </a>
+                    </li>
+                    <li class=" list-group-item ">
+                        <a href="../dashboard/index.html" >
+                            <i class="fas fa-tachometer-alt fa-fw fa-2x" ></i></br>Dashboard
+                        </a>
+                    </li>
+                    <li class="list-group-item ">
+                        <a href="../courses.html" >
+                            <i class="fa-solid fa-book fa-2x" ></i></br>Courses
+                        </a>
+                    </li>
+                    <li class=" list-group-item ">
+                        <a href="#" >
+                            <i class="fa-regular fa-calendar-days fa-2x" ></i></br>Calendar
+                        </a>
+                    </li>
+                    <li class=" list-group-item ">
+                        <a href="#" >
+                            <i class="fa-solid fa-inbox fa-2x" ></i></br>Inbox
+                        </a>
+                    </li>
+                    <li class="list-group-item ">
+                        <a href="#" >
+                            <i class="fa-regular fa-clock fa-2x" ></i></br>History
+                        </a>
+                    </li>
+                    <li class=" list-group-item ">
+                        <a href="#" >
+                            <i class="fa-solid fa-microchip fa-2x" ></i></br>Studio
+                        </a>
+                    </li>
+                    <li class=" list-group-item ">
+                        <a href="#" >
+                            <i class="fa-solid fa-arrow-right-from-bracket fa-2x" ></i></br>Commons
+                        </a>
+                    </li>
+                    <li class=" list-group-item ">
+                        <a href="#">
+                            <i class="fa-solid fa-question fa-2x" ></i> </br>Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col sidebar-margin">
+              <div class="icon-heading">
+                <i class="fa-solid fa-bars fa-2x"></i>
+                <h4 class="text-muted">Rakshith Reddy's Profile</h4>
+                
+              </div>
+              <hr>
+              <div class="row">
 
-        </tbody>
-    </table>
+                <div class="col wd-acc-nav d-none d-sm-block col-3">
+                    <ul class="wd-acc-nav-list list-group">
+                        <li class="list-group-item"><a href="#">Notifications</a></li>
+                        <li class="list-group-item active"><a href="index.html">Profile</a></li>
+                        <li class="list-group-item"><a href="#">Files</a></li>
+                        <li class="list-group-item"><a href="#">Settings</a></li>
+                        <li class="list-group-item"><a href="#">eProtfolios</a></li>
+                        <li class="list-group-item"><a href="#">Shared Content</a></li>
+                        <li class="list-group-item"><a href="#">The Hub</a></li>
+                        <li class="list-group-item"><a href="#">Qwickly Course Tools</a></li>
+                        <li class="list-group-item"><a href="#">Announcemnets</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-circle-user wd-profile-picture" style="color: #656972;"></i>
+                    <div class="form-group wd-profile-edit-section">
+                      <label for="text-name">Name:*</label>
+                      <input type="text" id="text-name" class="form-control" name="text-name" value="Rakshith Reddy" />
+                  </div>
+              
+                  <div class="form-group wd-profile-edit-section">
+                      <label for="pronouns">Pronouns:</label>
+                      <select id="pronouns" class="form-select" name="pronouns">
+                          <option value="VAL1" selected>None</option>
+                          <option value="VAL2">He</option>
+                          <option value="VAL2">She</option>
+                      </select>
+                  </div>
+              
+                  <div class="form-group wd-profile-edit-section" >
+                      <label for="text-title">Title:</label>
+                      <input type="text" id="text-title" name="text-title" class="form-control" />
+                  </div>
+              
+                  <div class="wd-profile-edit-section">
+                      <h3>Contact</h3>
+                      No registered services, you can add some on the <a href="#" class="text-danger">settings</a> page.
+                  </div>
+                  <div class="wd-profile-edit-section">
+                      <h3>Biography</h3>
+                      <textarea class="form-control"  rows="3">Master's Student, AI enthusiast.</textarea>  
+                  </div>
+                      <div class="wd-profile-edit-section">
+                      <h3>Links</h3>
+                      <div class="row">
+                          <div class="col">
+                              <h6 class="text-center">Title</h6>
+                              <input class="form-control" type="text" value="YouTube" name="text-youtube" id="text-youtube"/>
+                          </div>
+                          <div class="col-1 text-center wd-arrow-div">&#8594;</div>
+                          <div class="col">
+                              <h6 class="text-center">URL</h6>
+                              <input class="form-control" type="text" value="https://www.youtube.come/123" name="text-youtube-url" id="text-youtube-url"/>
+                          </div>
+                      </div>
+                  
+                      <button class="btn btn-secondary mt-3">Add another link</button><br />     
+                      </div>
+                      <hr>
+                  
+                  
+                  <div class="wd-profile-edit-section float-end">
+                      <a href="index.html">
+                          <button class="btn btn-secondary">Cancel</button>
+                      </a>
+                      <a href="index.html">
+                          <button class="btn btn-danger">Save Profile</button>
+                      </a>
+                  </div>
+                </div>
+                <div class="col d-md-flex">
+                  <a href="index.html">
+                      <button class="btn btn-secondary"><i class="fa-solid fa-pencil"></i> Cancel Editing</button>
+                  </a>
+              </div>
+               
+              </div>
+          </div>
+        </div>
+    </div>
 </body>
-
 </html>
