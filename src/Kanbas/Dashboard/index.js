@@ -1,7 +1,55 @@
 import { Link } from "react-router-dom";
 import "./index.css";
+import axios from "axios";
+import { BACKEND_BASE_URL } from "../../envVariables";
+import { useEffect, useState } from "react";
 
-function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, updateCourse }) {
+function Dashboard() {
+  const [courses, setCourses] = useState([]);
+  const URL = `${BACKEND_BASE_URL}/courses`;
+  const findAllCourses = async () => {
+    const response = await axios.get(URL);
+    setCourses(response.data);
+  };
+  useEffect(() => {
+    findAllCourses();
+
+  }, []);
+  const [course, setCourse] = useState({
+    name: "New Course",      number: "New Number",
+    startDate: "2023-09-10", endDate: "2023-12-15",
+  });
+  const addCourse = async () => {
+    const response = await axios.post(URL, course);
+    setCourses([
+      response.data,
+      ...courses,
+    ]);
+    setCourse({ name: "New Course" });
+  };
+
+  const deleteCourse = async (courseId) => {
+    const response = await axios.delete(
+      `${URL}/${courseId}`
+    );
+    setCourses(courses.filter((c) => c._id !== courseId));
+  };
+
+  const updateCourse = async () => {
+    const response = await axios.put(
+      `${URL}/${course._id}`,
+      course
+    );
+    setCourses(
+      courses.map((c) => {
+        if (c._id === course._id) {
+          return course;
+        }
+        return c;
+      })
+    );
+    setCourse({ name: "New Course" });
+  };
 
   return (
     <div>
@@ -23,12 +71,10 @@ function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, upd
             onChange={(e) => setCourse({ ...course, endDate: e.target.value })} /><br />
         </div>
         <div className="addOptions">
-          <button onClick={() => { addNewCourse(); }} type="button" class="btn btn-success" >
+          <button onClick={ addCourse } type="button" class="btn btn-success" >
             Add
           </button>
-          <button onClick={() => {
-            updateCourse();
-          }} type="button" class="btn btn-primary">
+          <button onClick={updateCourse} type="button" class="btn btn-primary">
             Update
           </button>
         </div>
@@ -37,25 +83,6 @@ function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, upd
       </div>
       {/* <div className="d-flex flex-row flex-wrap row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3"> */}
       {courses.map((course, index) => (
-        // <div className="col wd-custom-card ">
-        //   <div className="card wd-dashboard">
-        //     <img
-        //       src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUAlv+tY//LAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII="
-        //       alt="..."
-        //     />
-        //     <div className="card-body">
-        //       <Link key={course._id} to={`/Kanbas/Courses/${course._id}`}>
-        //         <h5 className="wd-card-course-title">{course.name}</h5>
-        //       </Link>
-        //       <h4 className="wd-card-course-code">
-        //         {course._id}.{course.startDate}.{course.endDate}{" "}
-        //       </h4>
-        //       <h6 class="wd-card-sem">{course.semester}</h6>
-        //       <br />
-        //       <FaRegPenToSquare />
-        //     </div>
-        //   </div>
-        // </div>
         <div className="course">
           <Link key={course._id} to={`/Kanbas/Courses/${course._id}`}>
             <h5>{course.name}</h5>

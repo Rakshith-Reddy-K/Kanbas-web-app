@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./index.css";
 import { AiOutlineHolder, AiOutlinePlus } from "react-icons/ai";
@@ -6,7 +6,8 @@ import { FaCaretRight } from "react-icons/fa6";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { FaEllipsisVertical } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteAssignment } from "./assignmentsReducer";
+import { deleteAssignment, setAssignments } from "./assignmentsReducer";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -15,14 +16,23 @@ function Assignments() {
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId,
   );
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+    );
+  }, [courseId]);
 
-  const handleDelete = (assignment) => {
+  const handleDelete = (assignmentId) => {
     const result = window.confirm('Do you want to delete this assignment');
-    console.log(result)
     if(result) {
-      dispatch(deleteAssignment(assignment._id));
+      client.deleteAssignment(assignmentId)
+            .then((status)=>{
+              dispatch(deleteAssignment(assignmentId))
+            });
     }
   }
+
   return (
     <div>
       <div
@@ -94,7 +104,7 @@ function Assignments() {
                 </Link>
                 <div className="assignmentDeleteButton">
                   <button
-                    onClick={() => handleDelete(assignment)} type="button" class="btn btn-danger">
+                    onClick={() => handleDelete(assignment._id)} type="button" class="btn btn-danger">
                     Delete
                   </button>
                 </div>
