@@ -10,6 +10,9 @@ function LandingPage() {
         <Link to="/Labs" className="nav-link">
           Labs
         </Link>
+        <Link to="/project" className="nav-link">
+          Projects
+        </Link>
       </div>
     </div>
   );
